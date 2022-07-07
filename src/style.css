@@ -8,7 +8,39 @@ body {
   margin: 5px;
   padding: 5px;
   margin-top: 3px;
+  box-sizing: border-box;
 }
 .input {
   margin-top: 5px;
+  border: 1px solid grey;
+}
+.allsuits {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  background-color: aliceblue;
+  margin: 5px;
+}
+.suit1 {
+  height: 20px;
+  width: 10px;
+  border: 1px solid black;
+}
+.spade:before,
+.spade:after {
+  content: "\2660";
+}
+.club:before,
+.club:after {
+  content: "\2663";
+}
+.heart:before,
+.heart:after {
+  content: "\2665";
+  color: red;
+}
+.diamond:before,
+.diamond:after {
+  content: "\2666";
+  color: red;
 }
