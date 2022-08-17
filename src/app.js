@@ -29,25 +29,20 @@ const generateRandomCards = cant => {
   return cards;
 };
 
-// Generate Card DOM
 const generateCardDOM = obj => {
-  // Create card div
   let card = document.createElement("div");
   card.classList.add("card");
   card.classList.add(obj["suit"]);
 
-  // Create paragraph of value
   const p = document.createElement("p");
   p.innerText = obj["value"];
 
-  // Create i of FA Icon
   const suitTop = document.createElement("i");
   suitTop.classList.add("fas");
   suitTop.classList.add("fa-" + obj["suit"]);
 
   const suitBottom = suitTop.cloneNode();
 
-  // Append to card div
   card.appendChild(suitTop);
   card.appendChild(p);
   card.appendChild(suitBottom);
@@ -55,7 +50,6 @@ const generateCardDOM = obj => {
   return card;
 };
 
-// Generate BubbleLog
 const generateBubbleLogDOM = (obj, num) => {
   let bubbleLog = document.createElement("div");
 
@@ -81,7 +75,6 @@ const generateBubbleLogDOM = (obj, num) => {
   bubbleLogContainer.appendChild(bubbleLog);
 };
 
-// Draw
 let drawCardDeck = () => {
   if (!cantInput.value.length) {
     alert("Debe ingresar un número de cartas a generar...");
@@ -102,7 +95,6 @@ let drawCardDeck = () => {
   bubbleLogContainer.innerHTML = "";
 };
 
-// Sort
 const sortCardDeck = () => {
   if (!randomCards.length) alert("Debe generar cartas...");
   if (randomCards.length >= 2) title.style.display = "block";
